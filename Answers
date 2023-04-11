@@ -1,0 +1,88 @@
+Answer:1
+function sum(a) {
+      return function (a2) {
+        return a + a2
+      }
+    }
+    b = sum(1)(2)
+    console.log(b)
+    
+Answer:2
+function find(arr, i, n) {
+      if (n === arr[i]) return true
+      if (i === 0) return false
+      return find(arr, i - 1, n)
+    }
+
+    let arr = [2, 3, 4, 8, -2],
+      n = -2
+    variable = find(arr, arr.length, n)
+    console.log(variable)
+
+Answer:3
+<body>
+    <div id="elem"></div>
+    <!-- <p>This is Paragraph tag p</p> -->
+  </body>
+  function addElem(str) {
+      const body = document.getElementById('elem')
+      const p = document.createElement('p');
+      p.textContent = str
+            // Then append child
+      body.appendChild(p)
+    }
+  addElem("This is Paragraph tag p")
+  
+Answer:4
+<body>
+    <ul id="List"> 
+      <li>first li</li>
+    </ul></body>
+    function addLi() {
+        const List = document.getElementById('List')
+        List.innerHTML += '<li> new li </li>'
+      }
+
+      addLi() 
+      addLi() 
+      addLi() 
+      
+Answer:5
+body >
+    <h1 id="idd">Hey there</h1> </body>
+    function changeCol(id, color){
+       const elem = document.getElementById(id);
+     elem.style.backgroundColor = color
+     }
+
+     changeCol("idd", 'cyan');
+
+Answer:6
+object = { name: 'codewithharry', role: 'Programmer' }
+      function save(name, data) {
+        localStorage.setItem(name, JSON.stringify(data))
+      }
+
+      save('ahsan', object);
+      
+Answer:7
+function save(name) {
+        data = localStorage.getItem(name)
+
+        return JSON.parse(data)
+      }
+
+
+      const data2 = save("ahsan");
+      console.log(data2);
+      
+Answer:8
+object = { name: 'Codewithharry', role: 'Youtuber' }
+      function setsave(data) {
+        const Keys = Object.keys(data)
+
+        for (let i = 0; i < Keys.length; i++) {
+          localStorage.setItem(Keys[i], JSON.stringify(data[Keys[i]]))
+        }
+      }
+      setsave(object);
